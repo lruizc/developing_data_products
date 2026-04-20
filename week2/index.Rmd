@@ -9,5 +9,5 @@ library(leaflet)
 
 leaflet() %>%
   addTiles() %>%
-  setView(lng = -74.000, lat = 40.730, zoom = 14)
+  setView(lng = -74.032, lat = 4.696, zoom = 14)
 ```
