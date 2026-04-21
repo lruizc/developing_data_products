@@ -1,0 +1,19 @@
+---
+title: "World Cup 2026 Forecast"
+date: "2026-04-21"
+output: ioslides_presentation
+---
+
+## 2026 World Cup Win Probability
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+
+countries <- c("Argentina", "France", "Brazil", "England")
+probabilities <- c(35, 30, 20, 15)
+
+plot_ly(x = countries, y = probabilities, type = 'bar', 
+        marker = list(color = c('lightblue', 'darkblue', 'yellow', 'red'))) %>%
+  layout(yaxis = list(title = "Probability (%)"),
+         xaxis = list(title = "Semi-finalists"))
+```
