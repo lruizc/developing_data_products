@@ -1,0 +1,43 @@
+EV vs Gas Car Calculator
+========================================================
+author: Luis Ruiz
+date: 
+autosize: true
+
+Objective
+========================================================
+
+The goal of this application is to compare the running costs of a traditional gasoline car against an electric vehicle.
+
+It provides a simple interface to adjust prices and driving habits.
+
+How it works
+========================================================
+
+Users input:
+- Daily driving distance
+- Local gasoline and electricity prices
+- Vehicle efficiency metrics
+
+The server calculates the daily and annual costs dynamically.
+
+Server Calculation Example
+========================================================
+
+Here is an example of the underlying calculation in R:
+
+```{r}
+distance <- 40
+gas_price <- 1.20 
+mpg <- 25
+liters100km <- 235.215 / mpg
+daily_gas_cost <- (distance / 100) * liters100km * gas_price
+daily_gas_cost * 365
+```
+
+Application Output
+========================================================
+
+The application presents the results in a tabular format and a bar chart, allowing the user to visualize the cost differences annually.
+
+The app is hosted on shinyapps.io and the source code is on GitHub.
